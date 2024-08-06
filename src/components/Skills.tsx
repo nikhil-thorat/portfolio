@@ -11,7 +11,7 @@ const Skills = () => {
 			</div>
 			<div className="grid max-w-4xl grid-cols-1 gap-4 mt-12 lg:grid-cols-3">
 				{SkillsData.map((skill, index) => (
-					<SkillCard index={index} skill={skill} />
+					<SkillCard key={index} skill={skill} />
 				))}
 			</div>
 		</section>
