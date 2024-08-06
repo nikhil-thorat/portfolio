@@ -17,7 +17,7 @@ const ContactsData = [
 	{
 		heading: "View my Resume - ",
 		subheading: "Resume.pdf",
-		link: "/public/Resume.pdf",
+		link: "/Resume.pdf",
 	},
 ];
 
