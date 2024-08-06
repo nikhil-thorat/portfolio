@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply font-poppins;
+		@apply bg-stone-300;
+		@apply text-stone-700 !important;
+		@apply transition-colors duration-300;
+		@apply select-none;
+	}
+
+	body[data-theme="dark"] {
+		@apply bg-stone-900;
+		@apply text-stone-300 !important;
+		@apply transition-colors duration-300;
+		@apply select-none;
+	}
+
+	.animate-reveal {
+		animation-timeline: view();
+		animation-range: entry 0 20%;
+	}
+}
