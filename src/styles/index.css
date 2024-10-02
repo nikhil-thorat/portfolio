@@ -10,16 +10,16 @@
 	}
 
 	body {
-		@apply font-poppins;
-		@apply bg-stone-300;
-		@apply text-stone-700 !important;
+		@apply font-poppins antialiased;
+		@apply bg-gradient-to-tr from-slate-300 to-slate-100;
+		@apply text-slate-900 !important;
 		@apply transition-colors duration-300;
 		@apply select-none;
 	}
 
 	body[data-theme="dark"] {
-		@apply bg-stone-900;
-		@apply text-stone-300 !important;
+		@apply bg-gradient-to-tr from-slate-950 to-slate-800;
+		@apply text-slate-100 !important;
 		@apply transition-colors duration-300;
 		@apply select-none;
 	}

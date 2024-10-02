@@ -7,7 +7,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: { project: ProjectCardProps }) => {
 	return (
-		<section className="flex flex-col items-start justify-start gap-2 p-4 border animate-reveal rounded-xl border-stone-700">
+		<section className="flex flex-col items-start justify-start gap-2 p-4 border animate-reveal rounded-xl border-slate-700">
 			<h2 className="text-2xl font-medium">{project.title}</h2>
 			<p className="mt-2 text-base font-light text-pretty">
 				{project.description}
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }: { project: ProjectCardProps }) => {
 			<div className="flex flex-wrap gap-2 mt-2">
 				{project.tags.map((tag: string, index: number) => (
 					<span
-						className="px-3 py-1 text-xs border rounded-full lg:text-sm border-stone-700"
+						className="px-3 py-1 text-xs border rounded-full lg:text-sm border-slate-700"
 						key={index}
 					>
 						{tag}

@@ -7,9 +7,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`sticky top-0 flex items-center justify-between w-full gap-2 py-4 h-fit z-40 transition-colors duration-300 ${
-				theme === "dark" ? "bg-stone-900" : "bg-stone-300"
-			}`}
+			className={`sticky top-0 flex items-center justify-between w-full gap-2 py-4 h-fit z-40 backdrop-blur`}
 		>
 			<div className="md:hidden" onClick={toggleMobileNavigation}>
 				<svg

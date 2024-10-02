@@ -7,13 +7,15 @@ const MobileNavigation = () => {
 
 	return (
 		<section
-			className={`fixed z-50 top-0 left-0 w-screen h-auto p-6 rounded-b-2xl transition-transform duration-300 ${
-				theme === "dark" ? "bg-stone-300" : "bg-stone-900"
+			className={`fixed z-50 top-0 left-0 bg-gradient-to-tr w-screen h-auto p-6 rounded-b-2xl transition-transform duration-300 ${
+				theme === "dark"
+					? "from-slate-300 to-slate-100"
+					: "from-slate-950 to-slate-800"
 			} ${isOpen ? "translate-y-0" : "-translate-y-full"}`}
 		>
 			<div
 				className={`flex items-center justify-between flex-1 ${
-					theme === "dark" ? "text-stone-700" : "text-stone-300"
+					theme === "dark" ? "text-slate-950" : "text-slate-100"
 				}`}
 			>
 				<h1 className="text-2xl font-medium ">
@@ -42,7 +44,7 @@ const MobileNavigation = () => {
 			</div>
 			<ul
 				className={`flex flex-col items-start flex-1 gap-4 mt-4 text-xl font-light ${
-					theme === "dark" ? "text-stone-700" : "text-stone-300"
+					theme === "dark" ? "text-slate-950" : "text-slate-100"
 				}`}
 			>
 				<li className="cursor-pointer hover:underline decoration-wavy underline-offset-4">
