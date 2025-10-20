@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  @apply bg-neutral-200;
+  @apply text-neutral-500;
+  @apply select-none;
+}
