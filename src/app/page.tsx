@@ -8,7 +8,7 @@ import TopBlur from "@/components/top-blur";
 
 function Home() {
   return (
-    <div className="w-3xl mx-auto h-screen flex flex-col gap-16 relative">
+    <div className="max-w-3xl w-auto px-8 lg:px-0 mx-auto h-screen flex flex-col gap-16 relative">
       <TopBlur />
       <Header />
       <Hero />
