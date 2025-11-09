@@ -4,6 +4,7 @@ import TopBlur from "@/components/top-blur";
 import { getBlogBySlug, getBlogSlugs } from "@/lib/blog";
 import Markdown from "markdown-to-jsx";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type Props = {
     params: { slug: string };
@@ -21,6 +22,10 @@ export const generateMetadata = async ({
     const { slug } = await params;
 
     const blog = getBlogBySlug(slug);
+
+    if (!blog) {
+        notFound();
+    }
 
     const description =
         blog.content
@@ -49,6 +54,10 @@ async function Blog({ params }: Props) {
     const { slug } = await params;
 
     const blog = getBlogBySlug(slug);
+
+    if (!blog) {
+        return notFound();
+    }
 
     return (
         <section className="relative max-w-3xl w-auto px-8 lg:px-0 mx-auto space-y-20 mt-20">

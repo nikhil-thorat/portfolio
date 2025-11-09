@@ -7,17 +7,17 @@ import Projects from "@/components/projects";
 import TopBlur from "@/components/top-blur";
 
 function Home() {
-  return (
-    <div className="max-w-3xl w-auto px-8 lg:px-0 mx-auto h-screen flex flex-col gap-16 relative">
-      <TopBlur />
-      <Header />
-      <Hero />
-      <Projects />
-      <Blogs />
-      <Contact />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="max-w-3xl w-auto px-8 lg:px-0 mx-auto h-screen flex flex-col gap-16 relative">
+            <TopBlur />
+            <Header />
+            <Hero />
+            <Projects />
+            <Blogs />
+            <Contact />
+            <Footer />
+        </div>
+    );
 }
 
 export default Home;
