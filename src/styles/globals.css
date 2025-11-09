@@ -4,5 +4,9 @@
 :root {
     @apply bg-neutral-200;
     @apply text-neutral-500;
-    @apply select-none;
+}
+
+*::selection {
+    @apply bg-neutral-300;
+    @apply text-neutral-500;
 }

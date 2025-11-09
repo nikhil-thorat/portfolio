@@ -21,7 +21,7 @@ function Clock() {
     const hourAngle = (hours * 30) + (minutes * 0.5);
 
     return (
-        <div className="">
+        <div suppressHydrationWarning>
             <svg width="28" height="28" viewBox="0 0 32 32">
                 <circle
                     cx="16"
@@ -63,7 +63,7 @@ function Clock() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     transform={`rotate(${secondAngle} 16 16)`}
-                    className='text-blue-500 transition-transform duration-1000 ease-linear'
+                    className='text-blue-500'
                 />
                 <circle cx="16" cy="16" r="1" fill="currentColor" className='text-blue-500' />
             </svg>
