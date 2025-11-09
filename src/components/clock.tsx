@@ -2,15 +2,20 @@
 import React, { useState, useEffect } from 'react';
 
 function Clock() {
-    const [time, setTime] = useState(new Date());
+    const [time, setTime] = useState<null | Date>(null);
 
     useEffect(() => {
+        setTime(new Date())
         const timer = setInterval(() => {
             setTime(new Date());
         }, 1000);
 
         return () => clearInterval(timer);
     }, []);
+
+    if (!time) {
+        return null
+    }
 
     const hours = time.getHours() % 12;
     const minutes = time.getMinutes();
