@@ -24,7 +24,7 @@ function Hero() {
         <div className="space-y-4">
             <p className="leading-7"><span className={`italic tracking-normal text-xl font-semibold text-neutral-700 ${instrumentSerif.className}`}>Build Break Fix. </span>Hi, I&apos;m Nikhil. I love building things and solving problems through code. Currently diving deeper into the core of computer science, while exploring artificial intelligence and practicing competitive programming as a side quest.</p>
             <p className="leading-7">
-                Apart from coding, I like spending my time playing some music with my Guitar, watching and playing Chess and ricing my Arch linux setup.
+                Apart from coding, I like spending my time playing some music with my Guitar, watching/playing Chess, solving Rubik&apos;s cube and ricing my Arch linux.
             </p>
         </div>
     </section>
