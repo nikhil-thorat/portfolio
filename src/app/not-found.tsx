@@ -11,9 +11,9 @@ const instrumentSerif = Instrument_Serif(
 function NotFound() {
     return <section className="bg-neutral-200 flex items-center justify-center min-h-screen">
         <div className="space-y-8">
-            <h1 className="text-7xl text-blue-500 text-center">/* 404 */</h1>
+            <h1 className="text-7xl text-blue-500 text-center">{"/* 404 */"}</h1>
             <p className={`${instrumentSerif.className} text-neutral-700 text-xl text-center`}>
-                You've Lost Your Path! Be Your Own Light And Guide Yourself To The Correct Path.
+                You&apps;ve Lost Your Path! Be Your Own Light And Guide Yourself To The Correct Path.
             </p>
         </div>
     </section>
