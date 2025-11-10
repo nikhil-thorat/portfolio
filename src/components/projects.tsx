@@ -13,7 +13,7 @@ function Projects() {
                     <p className="leading-7">
                         {project.description}
                     </p>
-                    <div className="space-x-4">
+                    <div className="flex flex-row gap-4 flex-wrap">
                         {project.tags.map((tag) => {
                             return <span className="text-sm italic bg-neutral-300/50 p-1.5 rounded-lg" key={tag}>{tag}</span>
                         })}
