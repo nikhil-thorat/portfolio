@@ -1,9 +1,10 @@
 import projects from "@/utils/projects";
 import Title from "./title";
+import ScrambleText from "./scramble";
 
 function Projects() {
     return <section className="group space-y-8">
-        <Title>Projects</Title>
+        <Title><span className="group-hover:text-blue-500"><ScrambleText text="PROJECTS" /></span></Title>
         <div className="flex flex-col gap-12">
             {projects.map((project) => {
                 return <div key={project.github} className="flex flex-col gap-2 group/project">
@@ -13,9 +14,9 @@ function Projects() {
                     <p className="leading-7">
                         {project.description}
                     </p>
-                    <div className="flex flex-row gap-4 flex-wrap">
+                    <div className="flex flex-row gap-2 flex-wrap">
                         {project.tags.map((tag) => {
-                            return <span className="text-sm italic bg-neutral-300/50 p-1.5 rounded-lg" key={tag}>{tag}</span>
+                            return <span className="text-sm italic bg-neutral-200/50 px-3 py-1 rounded-lg" key={tag}>{tag}</span>
                         })}
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import { Instrument_Serif } from "next/font/google";
+import HoverImageText from "./image_cursor";
 
 const instrumentSerif = Instrument_Serif(
     {
@@ -14,17 +15,17 @@ function Hero() {
         <div className="flex gap-4 flex-col">
             <div className="flex items-center gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
-                <h1>Pune, India</h1>
+                <h1><HoverImageText text="Pune" imageSrc="/images/shanivar_wada.png" />, India</h1>
             </div>
             <div className="flex items-center gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
-                <h1>Student at SPPU</h1>
+                <h1>Student at <HoverImageText text="SPPU" imageSrc="/images/pune_university.png" /></h1>
             </div>
         </div>
         <div className="space-y-4">
-            <p className="leading-7"><span className={`italic tracking-normal text-xl font-semibold text-neutral-700 ${instrumentSerif.className}`}>Build Break Fix. </span>Hi, I&apos;m Nikhil. I love building things and solving problems through code. Currently diving deeper into the core of computer science, while exploring artificial intelligence and practicing competitive programming as a side quest.</p>
+            <p className="leading-7"><span className={`italic tracking-normal text-xl font-semibold ${instrumentSerif.className}`}>Build Break Fix. </span>Hi, I&apos;m Nikhil. I love building things and solving problems through code. Currently diving deeper into the core of computer science, while exploring artificial intelligence and practicing competitive programming as a side quest.</p>
             <p className="leading-7">
-                Apart from coding, I like spending my time playing some music with my Guitar, watching/playing Chess, solving Rubik&apos;s cube and ricing my Arch linux.
+                Apart from coding, I like spending my time playing some music with my <HoverImageText text="Guitar" imageSrc="/images/guitar.png" downscale={true} />, watching/playing <HoverImageText text="Chess" imageSrc="/images/chess.png" downscale={true} /> and solving <HoverImageText text="Rubik's Cube" imageSrc="/images/rubiks_cube.png" downscale={true} />
             </p>
         </div>
     </section>

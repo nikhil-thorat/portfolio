@@ -1,13 +1,14 @@
 import { getAllBlogs } from "@/lib/blog";
 import Title from "./title";
 import Link from "next/link";
+import ScrambleText from "./scramble";
 
 function Blogs() {
 
     const blogs = getAllBlogs()
 
     return <section className="group space-y-8">
-        <Title>Writings</Title>
+        <Title><span className="group-hover:text-blue-500"><ScrambleText text="WRITINGS" /></span></Title>
         <div>
             <div className="flex flex-col gap-4">
                 {blogs.length == 0 && <p className="text-sm">Coming Soon..!</p>}

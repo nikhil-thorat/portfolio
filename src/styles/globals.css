@@ -2,11 +2,11 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-    @apply bg-neutral-200;
+    @apply bg-neutral-100;
     @apply text-neutral-500;
 }
 
 *::selection {
-    @apply bg-neutral-300;
-    @apply text-neutral-500;
+    @apply bg-neutral-200;
+    @apply text-neutral-400;
 }

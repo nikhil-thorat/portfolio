@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "@/styles/globals.css";
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const ibm_plex_mono = IBM_Plex_Mono({
+    variable: "--font-ibm-plex-mono",
+    weight: ["400", "500"],
     subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
     title: "Nikhil Thorat | Portfolio",
-    description: "A Machine learning engineer, based in Pune, India",
+    description: "Software Developer, based in India.",
 };
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistMono.variable} antialiased font-mono`}
+                className={`${ibm_plex_mono.className} antialiased`}
             >
                 {children}
             </body>
