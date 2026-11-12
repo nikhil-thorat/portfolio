@@ -5,6 +5,7 @@ import GitHubActivity from "@/components/github-activity";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
+import Skills from "@/components/skills";
 import TopBar from "@/components/top-bar";
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
         <div data-reveal className="my-14 sm:my-20">
           <GitHubActivity username="nikhil-thorat" showMonths />
         </div>
+        <Skills />
         <Projects featuredOnly />
         <Blogs limit={2} showAllLink />
         <Contact />

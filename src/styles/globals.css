@@ -38,6 +38,55 @@ html.lenis body {
     overflow: hidden;
 }
 
+/* Skills marquee */
+@keyframes skills-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes skills-scroll-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.skills-track {
+    display: flex;
+    align-items: center;
+    animation-name: skills-scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.skills-track-reverse {
+    animation-name: skills-scroll-reverse;
+}
+.skills-row {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 12%,
+        black 88%,
+        transparent
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 12%,
+        black 88%,
+        transparent
+    );
+}
+@media (prefers-reduced-motion: reduce) {
+    .skills-track {
+        animation: none;
+    }
+}
+
 /* Split-text masks */
 .split-word {
     display: inline-block;
