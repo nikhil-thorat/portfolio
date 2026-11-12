@@ -44,3 +44,34 @@ export const getAllBlogs = (): IBlog[] => {
 
     return blogs;
 };
+
+export const formatBlogDate = (date: string) => {
+    const parsed = new Date(date);
+
+    if (Number.isNaN(parsed.getTime())) {
+        return date;
+    }
+
+    return new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+    }).format(parsed);
+};
+
+export const getBlogExcerpt = (content: string, length = 170) => {
+    const paragraph = content
+        .split("\n")
+        .map((line) => line.trim())
+        .find((line) => line && !/^[#>\-*|]/.test(line) && !line.startsWith("!["));
+
+    if (!paragraph) {
+        return "";
+    }
+
+    const plain = paragraph
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+        .replace(/[`*_]/g, "");
+
+    return plain.length > length ? `${plain.slice(0, length).trimEnd()}…` : plain;
+};

@@ -1,35 +1,75 @@
 export interface IProject {
-    title: string,
-    description: string
-    tags: string[],
-    github: string
+  title: string;
+  description: string;
+  tags: string[];
+  github: string;
+  video: string;
+  featured: boolean;
 }
 
 const projects: IProject[] = [
-    {
-        title: "MiniDB",
-        description: "A blazing-fast, in-memory key-value database built entirely from scratch in C. MiniDB is an embedded database engine designed to process millions of operations per second. It acts as an LRU (Least Recently Used) cache and relies on custom memory management, bitwise math, and an optimized hashing algorithm to achieve extreme hardware efficiency.",
-        tags: ["C", "Memory Management", "Hashing", "LRU Cache"],
-        github: "https://github.com/nikhil-thorat/minidb"
-    },
-    {
-        title: "Relay",
-        description: "Relay is a lightweight load balancer written in Go. It is designed to be used both as a standalone CLI application and as an embeddable Go package. The project focuses on simplicity, extensibility, and observability while providing a solid foundation for building production-grade traffic routing systems.",
-        tags: ["Go", "Reverse Proxy", "Load Balancer", "Networking", "Concurrency"],
-        github: "https://github.com/nikhil-thorat/relay"
-    },
-    {
-        title: "CHIP8",
-        description: "Implemented a terminal-based CHP8 emulator in C from ground up with zero external dependencies, including CPU state, 4KB memory, 62x32(VRAM) display memory, hexadecimal keypad, timers and audio state.",
-        tags: ["C", "Emulation", "Computer Architecture", "Low-Level Programming"],
-        github: "https://github.com/nikhil-thorat/chip8"
-    },
-    {
-        title: "PlaceMate [Actively developing]",
-        description: "Developed a placement-cell platform connecting students, placement-cell members and companies for profile-management, opportunity discovery, application tracking, central dashboards and AI-assisted tutoring.",
-        tags: ["Next.js", "Typescript", "React", "Supabase", "Multi-Agent Systems"],
-        github: "https://github.com/CODEFORBLIND/placemate"
-    },
-]
+  {
+    title: "Fwdly",
+    description:
+      "A URL-shortening platform built around independent Go services. Separates link management from latency-sensitive redirects, using PostgreSQL, Redis, and Kafka to handle persistence, caching, and asynchronous workflows, with subscription billing through Stripe.",
+    tags: ["Go", "Microservices", "PostgreSQL", "Redis", "Kafka", "Stripe"],
+    github: "https://github.com/nikhil-thorat/fwdly",
+    video: "fwdly.mp4",
+    featured: true,
+  },
+  {
+    title: "MiniDB",
+    description:
+      "An embedded, in-memory key-value database built from scratch in C. Combines custom memory management, cache-conscious hash tables, sharding, and O(1) LRU eviction. Benchmarked across 50 million operations, achieving approximately 1.2M writes/sec and 2.8M reads/sec.",
+    tags: [
+      "C",
+      "Memory Management",
+      "Hashing",
+      "Data Structures",
+      "Performance",
+    ],
+    github: "https://github.com/nikhil-thorat/minidb",
+    video: "minidb.mp4",
+    featured: true,
+  },
+  {
+    title: "Relay",
+    description:
+      "A lightweight HTTP load balancer written in Go, designed as both a standalone CLI and an embeddable package. Features modular routing strategies, backend health checks, reverse proxying, structured logging, and optional Prometheus metrics.",
+    tags: [
+      "Go",
+      "Reverse Proxy",
+      "Load Balancing",
+      "Networking",
+      "Concurrency",
+    ],
+    github: "https://github.com/nikhil-thorat/relay",
+    video: "relay.mp4",
+    featured: true,
+  },
+  {
+    title: "CHIP8",
+    description:
+      "A CHIP-8 emulator implemented from scratch in C, without external dependencies. Models a virtual CPU, memory, instruction execution, display, keypad, and timers, with the emulation core decoupled from terminal I/O.",
+    tags: ["C", "Emulation", "Computer Architecture", "Low-Level Programming"],
+    github: "https://github.com/nikhil-thorat/chip8",
+    video: "chip8.mp4",
+    featured: true,
+  },
+  {
+    title: "Paper Pilot",
+    description:
+      "An Arcade style Game made with Pygame base on a Paper Plane which is being chased by Pencils, the main Goal is to stay alive and collect Coins which spaws randomly and If you manage to collied Pencils with each other you get Bonus points",
+    tags: [
+      "Python",
+      "Pygame",
+      "Object-Oriented Programming",
+      "Game Development",
+    ],
+    github: "https://github.com/nikhil-thorat/PaperPilot",
+    video: "paper_pilot.mp4",
+    featured: true,
+  },
+];
 
-export default projects
+export default projects;

@@ -1,33 +1,55 @@
-import { Instrument_Serif } from "next/font/google";
-import HoverImageText from "./image_cursor";
-
-const instrumentSerif = Instrument_Serif(
-    {
-        variable: "--font-instrument-serif",
-        weight: ["400"],
-        subsets: ["latin"],
-        style: ["italic"]
-    }
-)
+import Link from "next/link";
 
 function Hero() {
-    return <section className="space-y-8">
-        <div className="flex gap-4 flex-col">
-            <div className="flex items-center gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
-                <h1><HoverImageText text="Pune" imageSrc="/images/shanivar_wada.png" />, India</h1>
-            </div>
-            <div className="flex items-center gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
-                <h1>Student at <HoverImageText text="SPPU" imageSrc="/images/pune_university.png" /></h1>
-            </div>
-        </div>
-        <div className="space-y-4">
-            <p className="leading-7"><span className={`italic tracking-normal text-xl font-semibold ${instrumentSerif.className}`}>Build Break Fix. </span>Hi, I&apos;m Nikhil. I love building things and solving problems through code. Currently diving deeper into the core of computer science, while exploring artificial intelligence and practicing competitive programming as a side quest.</p>
-            <p className="leading-7">
-                Apart from coding, I like spending my time playing some music with my <HoverImageText text="Guitar" imageSrc="/images/guitar.png" downscale={true} />, watching/playing <HoverImageText text="Chess" imageSrc="/images/chess.png" downscale={true} /> and solving <HoverImageText text="Rubik's Cube" imageSrc="/images/rubiks_cube.png" downscale={true} />
-            </p>
-        </div>
+  return (
+    <section className="my-14 flex flex-col gap-4 sm:my-20">
+      <p data-hero className="text-xl font-light sm:text-2xl">
+        Hey, <span className="ml-2 text-2xl sm:text-3xl">👋🏻</span>
+      </p>
+      <h1
+        data-split
+        data-split-delay="0.3"
+        className="text-5xl font-semibold tracking-tighter sm:text-6xl md:text-7xl"
+      >
+        {"I'm Nikh!l"}
+      </h1>
+      <div
+        data-hero
+        className="mt-8 space-y-6 text-lg font-light text-pretty sm:mt-12 sm:space-y-8 sm:text-xl"
+      >
+        <p>
+          A software engineer based in Pune, India. Drawn to backend systems,
+          thoughtful engineering and interesting problems. I enjoy building
+          things, learning continuously and finding inspiration in the little
+          things beyond technology.
+        </p>
+        <p>
+          I spend my free time playing classical Guitar, solving Rubik’s Cube
+          and watching Beatbox/Loopstation battles.
+        </p>
+      </div>
+      <div
+        data-hero
+        className="mt-10 flex flex-wrap items-center gap-6 sm:mt-20 sm:gap-12"
+      >
+        <Link href={"#contact"}>
+          <button
+            data-magnetic
+            className="squircle rounded-4xl bg-neutral-200 cursor-pointer px-8 py-3.5 text-base shadow-md border border-neutral-300 sm:px-12 sm:py-4"
+          >
+            {"Let's talk"}
+          </button>
+        </Link>
+        <Link
+          href={
+            "https://drive.google.com/drive/folders/1ITWi8YoAnW56ORAglBwlZGDzeI6U0DZg?usp=sharing"
+          }
+          className="hover:underline underline-offset-2 decoration-2 decoration-wavy decoration-yellow-400"
+        >
+          View CV
+        </Link>
+      </div>
     </section>
+  );
 }
 export default Hero;

@@ -1,12 +1,53 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@plugin "@usespaceui/squircle";
 
 :root {
     @apply bg-neutral-100;
     @apply text-neutral-500;
+    @apply accent-yellow-400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-bricolage-grotesque), sans-serif;
+    @apply text-neutral-800;
 }
 
 *::selection {
-    @apply bg-neutral-200;
-    @apply text-neutral-400;
+    @apply bg-yellow-400;
+    @apply text-neutral-900;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Split-text masks */
+.split-word {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+}
+.split-char {
+    display: inline-block;
+    will-change: transform;
+    text-decoration: inherit;
 }
